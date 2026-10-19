@@ -44,19 +44,19 @@ module Importmap
     alias EntryPoint = String | Array(String)
 
     struct MappedFile
-      getter name : String
-      getter path : String
-      getter preload : Preload
+      attr_reader name : String
+      attr_reader path : String
+      attr_reader preload : Preload
 
       def initialize(@name, @path, @preload)
       end
     end
 
     struct MappedDir
-      getter dir : String
-      getter under : String?
-      getter path : String?
-      getter preload : Preload
+      attr_reader dir : String
+      attr_reader under : String?
+      attr_reader path : String?
+      attr_reader preload : Preload
 
       def initialize(@dir, @under, @path, @preload)
       end
@@ -67,8 +67,8 @@ module Importmap
     @directories = {} of String => MappedDir
     @cache = {} of String => (String | Array(String))
 
-    getter packages : Hash(String, MappedFile)
-    getter directories : Hash(String, MappedDir)
+    attr_reader packages : Hash(String, MappedFile)
+    attr_reader directories : Hash(String, MappedDir)
 
     # Block-DSL вместо instance_eval-конфига (см. отклонения):
     #

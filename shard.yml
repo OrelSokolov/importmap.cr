@@ -1,7 +1,10 @@
 name: importmap_cr
-version: 0.1.0
+version: 0.1.1
 crystal: ">= 1.21.0"
 dependencies:
+  attr_reader_cr:
+    github: OrelSokolov/attr_reader.cr
+    version: ~> 0.1.0
   active_support_cr:
     github: OrelSokolov/active_support.cr
     version: ~> 0.1.0

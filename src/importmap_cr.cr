@@ -8,6 +8,7 @@
 require "action_view_cr"
 require "./map"
 require "./tags_helper"
+require "attr_reader_cr"
 
 module Importmap
     @@map : Map?
